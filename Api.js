@@ -1,4 +1,3 @@
-
 var b = document.getElementById("formbutton");
 var result = "";
 var result1 = "";
@@ -41,7 +40,6 @@ b.addEventListener('click', () => {
 
     dailyCalories = parseInt(dailyCalories);
 
-
     async function Arun() {
         const response = await fetch("https://content.newtonschool.co/v1/pr/64995a40e889f331d43f70ae/categories");
         const response1 = await response.json();
@@ -58,30 +56,23 @@ b.addEventListener('click', () => {
 
 
 
-                data1 = `<div>
-            <h1>BREAKFAST</h1>
+                data1 = `<h1>BREAKFAST</h1>
             <img src=${output.breakfast.image}">
             <h2>${output.breakfast.title}</h2>
             <p>Calories :- ${dailyCalories}</p>
-            <button onclick="recipebtn()">GET RECIPE</button>
-        </div>`
+            <button onclick="recipebtn()">GET RECIPE</button>`
 
-                data2 = `<div>
-                <h1>LUNCH</h1>
+                data2 = `<h1>LUNCH</h1>
                 <img src=${output.lunch.image}>
                 <h2>${output.lunch.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button onclick="recipebtn1()">GET RECIPE</button>
-            </div>`
+                <button onclick="recipebtn1()">GET RECIPE</button>`
 
-                data3 = `<div>
-                <h1>DINNER
-                </h1>
+                data3 = `<h1>DINNER</h1>
                 <img src=${output.dinner.image}">
                 <h2>${output.dinner.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button onclick="recipebtn2()">GET RECIPE</button>
-            </div>`
+                <button onclick="recipebtn2()">GET RECIPE</button>`
 
 
 
@@ -97,29 +88,23 @@ b.addEventListener('click', () => {
                 result2 = output.dinner.title;
 
 
-                data1 = `<div>
-            <h1>BREAKFAST</h1>
+                data1 = `<h1>BREAKFAST</h1>
             <img src=${output.breakfast.image}>
             <h2>${output.breakfast.title}</h2>
             <p>Calories :- ${dailyCalories}</p>
-            <button onclick="recipebtn()">GET RECIPE</button>
-        </div>`
+            <button onclick="recipebtn()">GET RECIPE</button>`
 
-                data2 = `<div>
-                <h1>LUNCH</h1>
+                data2 = `<h1>LUNCH</h1>
                 <img src=${output.lunch.image}>
                 <h2>${output.lunch.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button onclick="recipebtn1()">GET RECIPE</button>
-            </div>`
+                <button onclick="recipebtn1()">GET RECIPE</button>`
 
-                data3 = `<div>
-                <h1>DINNER</h1>
+                data3 = `<h1>DINNER</h1>
                 <img src=${output.dinner.image}>
                 <h2>${output.dinner.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button onclick="recipebtn2()">GET RECIPE</button>
-            </div>`
+                <button onclick="recipebtn2()">GET RECIPE</button>`
 
 
                 document.getElementById("card1").innerHTML = data1;
@@ -133,30 +118,24 @@ b.addEventListener('click', () => {
                 result1 = output.lunch.title;
                 result2 = output.dinner.title;
 
-                data1 = `<div>
-            <h1>BREAKFAST</h1>
+                data1 = `<h1>BREAKFAST</h1>
             <img src=${output.breakfast.image}>
             <h2>${output.breakfast.title}</h2>
             <p>Calories :- ${dailyCalories}</p>
-            <button onclick="recipebtn()">GET RECIPE</button>
-        </div>`
+            <button onclick="recipebtn()">GET RECIPE</button>`
 
-                data2 = `<div>
-                <h1>LUNCH</h1>
+                data2 = `<h1>LUNCH</h1>
                 <img src=${output.lunch.image}>
                 <h2>${output.lunch.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button  onclick="recipebtn1()">GET RECIPE</button>
-            </div>`
+                <button  onclick="recipebtn1()">GET RECIPE</button>`
 
 
-                data3 = `<div>
-                <h1>LUNCH</h1>
+                data3 = `<h1>LUNCH</h1>
                 <img src=${output.dinner.image}>
                 <h2>${output.dinner.title}</h2>
                 <p>Calories :- ${dailyCalories}</p>
-                <button  onclick="recipebtn2()">GET RECIPE</button>
-            </div>`
+                <button  onclick="recipebtn2()">GET RECIPE</button>`
 
 
 
@@ -182,6 +161,7 @@ b.addEventListener('click', () => {
 
 
 });
+
 
 var ul = document.getElementById("first-ul");
 var ol = document.getElementById("second-ol");

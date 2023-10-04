@@ -1,44 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="Api.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
 
-    <!-- 
-Nav bar section  -->
-    <header>
-        <a href="#" class="logo">Meal Planner</a>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#form-id">Details</a>
-            <a href="#Mealplan">Meal Plan</a>
-            <a href="#steps">Recipes</a>
+    <nav>
 
-        </nav>
+        <div class="logo">Meal Planner</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menubar">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#form-id">Details</a></li>
+            <li><a href="#Mealplan">Meal Plan</a></li>
+            <li><a href="#steps">Recipes</a></li>
+        </ul>
 
-    </header>
-
-
-
-
-
-    <!-- <nav>
-            <div class="logo">
-                <img src="healthy-food.webp" alt="Logo">
-            </div>
-            <h1 class="site-title">Meal Planner</h1>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#form-id">Details</a></li>
-                <li><a href="#cards">Meal Plan</a></li>
-                <li><a href="#lastsection">Recipes</a></li>
-            </ul>
-        </nav> -->
+    </nav>
 
 
-    <!-- form section -->
+
+
 
     <form id="form-id">
         <div class="mydivcontainer">
@@ -60,17 +56,17 @@ Nav bar section  -->
             <div class="mydiv">
                 <label for="gender"></label>
                 <select id="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
+                    <option value="male" id="option">Male</option>
+                    <option value="female" id="option">Female</option>
                 </select>
             </div>
 
             <div class="mydiv">
                 <label for="activity"></label>
                 <select id="activity" required>
-                    <option value="light">Light</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="active">Active</option>
+                    <option value="light" id="option">Light</option>
+                    <option value="moderate" id="option">Moderate</option>
+                    <option value="active" id="option">Active</option>
                 </select>
             </div>
         </div>
@@ -80,51 +76,45 @@ Nav bar section  -->
         <button class="btn1" id="formbutton">Generate Meals</button>
     </div>
 
-    <!-- 
-    Meal card section -->
-    <div id="Mealplan">
 
-        <div class="container-card" id="cards">
-            <div class="card" id="card1">
-                <div>
-                    <h1>BREAKFAST</h1>
-                    <img src="https://www.acouplecooks.com/wp-content/uploads/2021/01/Peanut-Butter-Oatmeal-018s.jpg"
-                        alt="Card 1 Image">
-                    <h2>Peanut Butter and Chocolate Oatmeal</h2>
-                    <p>Calories</p>
-                    <button onclick="recipebtn()">GET RECIPE</button>
-                </div>
-            </div>
-            <div class="card" id="card2">
-                <div>
-                    <h1>LUNCH</h1>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2n_nABLmehwpFYIRDJCUYLFqt_dS1_8OJSw&usqp=CAU%22"
-                        alt="Card 2 Image">
-                    <h2>Spinach and Feta Stuffed Peppers</h2>
-                    <p>Calories</p>
-                    <button onclick="recipebtn1()">GET RECIPE</button>
-                </div>
-            </div>
-            <div class="card" id="card3">
-                <div>
-                    <h1>DINNER</h1>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPx-vjd_TgOBi290TXM8eErstzNjJ72DYPLg&usqp=CAU"
-                        alt="Card 3 Image">
-                    <h2>Lentil Soup</h2>
-                    <p>Calories</p>
-                    <button onclick="recipebtn2()">GET RECIPE</button>
-                </div>
-            </div>
+
+
+
+    <div class="container" id="Mealplan">
+        <div class="card" id="card1">
+            <h1>BREAKFAST</h1>
+            <img src="https://www.acouplecooks.com/wp-content/uploads/2021/01/Peanut-Butter-Oatmeal-018s.jpg"
+                alt="Card 1 Image">
+            <h2>Peanut Butter and Chocolate Oatmeal</h2>
+            <p>Calories</p>
+            <button onclick="recipebtn()">GET RECIPE</button>
+        </div>
+
+        <div class="card" id="card2">
+            <h1>LUNCH</h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2n_nABLmehwpFYIRDJCUYLFqt_dS1_8OJSw&usqp=CAU%22"
+                alt="Card 2 Image">
+            <h2>Spinach and Feta Stuffed Peppers</h2>
+            <p>Calories</p>
+            <button onclick="recipebtn1()">GET RECIPE</button>
+        </div>
+
+        <div class="card" id="card3">
+            <h1>DINNER</h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPx-vjd_TgOBi290TXM8eErstzNjJ72DYPLg&usqp=CAU"
+                alt="Card 3 Image">
+            <h2>Lentil Soup</h2>
+            <p>Calories</p>
+            <button onclick="recipebtn2()">GET RECIPE</button>
         </div>
     </div>
+    
 
 
 
-
-    <!-- Ingredients and steps section  -->
-
-    <div class="container">
-        <div class="cards" id="ingredients">
+    
+    <div class="Recipes" id="ingredients">
+        <div class="cards">
             <div>
                 <h2>INGREDIENTS</h2>
                 <p id="quotation">"You don’t have to eat less, you just have to eat right.”</p>
@@ -147,15 +137,11 @@ Nav bar section  -->
     </div>
 
 
-    <footer class="last">
-        <div class="footer-content">
-            Copyright @ 2023, Meal Planner Project Built By Arun Kumar Reddy
-
-        </div>
+    <footer class="footer-content">
+        
+           <p>Copyright @ 2023, Meal Planner Project Built By Arun Kumar Reddy</p> 
     </footer>
 
     <script src="Api.js"></script>
-
-</body>
 
 </html>

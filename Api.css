@@ -1,144 +1,144 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 
 
-header{
-    position: fixed;
-    top :0;
-    width:100%;
-    padding: 20px 120px;
-    background: #333;
+
+nav {
+    background-color: #000;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0px 50px 0px 80px;
 
 }
-.logo{
+
+nav .logo {
     font-size: 30px;
-    color: #fff;
-    text-decoration: none;
+    color: whitesmoke;
     font-weight: 800;
-}
-nav a{
-    font-size: 18px;
-    color: #fff;
-    text-decoration: none;
-    /* font-weight: 500; */
-    font-weight: bold;
-    margin-left: 35px;
-    transition: .3s;
-
-}
-
-nav a:hover,nav a.active{
-   color:  #00abf0;
     
+
 }
 
 
-
-
-/* .header-name{
-    padding:0.625rem 2.5rem;
-    top:0px;
-    border-bottom: 1px solid #cccccc;
-    box-shadow: 0 0 10px 0px #cccccc ;
-    background-color: #fff;
-    position: sticky;
-}
-
-.navbar{
-    justify-content: space-between;
-    align-items: center;
-}
-.d-flex{
+nav ul {
     display: flex;
-}
-.navbar-logo{
-    cursor: pointer;
-    color:#363636;
-    font-weight: 800;
-    font-size: 1.5rem;
-}
-.navbar-navigation d-flex{
-    justify-content: space-between;
-    align-items: center;
-
-
-    } */
-/* nav bar cSS starts here */
-/* nav {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+    list-style: none;
 }
 
-.logo img {
-    height: 40px;
-}
+nav ul li {
+    margin: 0px 5px;
+    padding: 10px 12px;
 
-.site-title {
-    margin-left: 15rem;
-    font-size: 24px;
-}
-.nav-links{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
 
 }
 
-
-.nav-links li {
-    display: inline;
-    margin-right: 20px;
-}
- 
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
+nav ul li a {
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
+
+    text-decoration: none;
+    padding: 10px;
+    color: whitesmoke;
+    padding: 10px;
+    transition: all 0.3s ease;
+
+}
+nav  ul li a.active{
+    color:  #00abf0;
+     
+ }
+
+nav ul li a:hover {
+    color: #00abf0;
+
 }
 
-.nav-links a:hover {
-    color: #ff4500;
-} */
+#click {
+    display: none;
+}
+
+nav .menubar i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+@media (max-width:940px) {
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: #000;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        display: block;
+        font-weight: 600;
+
+    }
+
+    nav ul li a:hover {
+        color: #00abf0;
+
+    }
+
+    nav .menubar i {
+        display: block;
+    }
+
+    #click:checked~ul {
+        left: 0;
+
+    }
+
+    #clicked :checked~.menubar i:before {
+        content: "\f00d";
+    }
+}
 
 
 
 
 
 
-
-/* user form CSS starts here */
 .mydiv {
-    /* background: #abe150; */
+
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .mydivcontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 
 input[type="number"],
 select {
-    width: 50%;
+    width: 40%;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
@@ -162,7 +162,8 @@ select {
 
 .btn {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 }
 
 .btn1:hover {
@@ -171,35 +172,66 @@ select {
 
 
 
+@media (max-width:940px) {
+    .mydivcontainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
 
+    }
 
-/* Meal card section starts here */
+    input[type="number"]{
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+        
 
-#cards {
-    /* display: flex; */
-    justify-content: space-evenly;
-    margin-top: 6rem;
+    }
+     select {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+    } 
+    #option{
+        font-size: 10px;
+    }
 
+    .btn {
+        text-align: center;
+    }
 }
 
 
 
-.container-card {
+
+
+
+
+.container {
     display: flex;
+    justify-content: center;
 }
 
 .card {
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    background-color: #fff;
-    width: 20%;
-    cursor: pointer;
-}
 
+}
 
 .card h1 {
     font-size: 24px;
@@ -209,7 +241,7 @@ select {
 .card img {
     border-radius: 5px;
     height: 225px;
-    width: 250px;
+    width: 300px;
 }
 
 .card h2 {
@@ -219,10 +251,9 @@ select {
 
 .card p {
     margin: 10px 0;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 500;
-    /* padding-top: 0.5rem; */
-    /* position: absolute; */
+
 }
 
 .card button {
@@ -244,22 +275,19 @@ select {
 
 }
 
-
-@media only  screen and (width<=1427px) {
-    .card img {
-        border-radius: 5px;
-        width: 160px;
-
+@media only screen and (max-width: 940px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        
     }
-
- 
+   
 }
 
 
-/* Ingrdients and steps section */
 
 
-.container {
+.Recipes {
     margin: 0px auto;
     padding: 4rem;
     max-width: 62.5rem;
@@ -284,7 +312,7 @@ select {
     border-radius: 10px;
 }
 
-.container h2 {
+.Recipes h2 {
     text-align: center;
     color: #00abf0;
     padding-top: 20px;
@@ -319,19 +347,59 @@ li {
 
 
 
+@media (max-width:940px) {
 
-.last{
+
+
+    #first-ul{
+       
+        grid-template-columns: repeat(1, 1fr);
+        color: #fff;
+        margin-left: 3rem;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+        letter-spacing: 1px;
+        margin-right:5px ;
+    
+    }
+
+    #second-ol {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        margin-left: 3rem;
+        margin-top: 2rem;
+        letter-spacing: 1px;
+        margin-right:5px ;
+    }
+
+
+}
+
+
+ .footer-content p{
     margin-top: 30px;
     height: 50px;   
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
- }
- .footer-content{
     font-weight: 800;
     color: #fff;
     letter-spacing: 1px;
+    
+ }
+
+ @media (max-width:540px) {
+    .footer-content p{
+       text-align: center;
+       margin-top: 5px;
+       margin-bottom: 5px;
+
+    }
+
+
+
+
+
  }
